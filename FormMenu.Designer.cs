@@ -34,9 +34,11 @@
             this.BotaoMaximizar = new System.Windows.Forms.Button();
             this.BotaoFechar = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BotaoRemover = new System.Windows.Forms.Button();
             this.BotaoEstoque = new System.Windows.Forms.Button();
             this.BotaoAdicionar = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
+            this.BotaoMinimizar = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +46,7 @@
             // panelCabecalho
             // 
             this.panelCabecalho.BackColor = System.Drawing.Color.White;
+            this.panelCabecalho.Controls.Add(this.BotaoMinimizar);
             this.panelCabecalho.Controls.Add(this.Title);
             this.panelCabecalho.Controls.Add(this.BotaoMaximizar);
             this.panelCabecalho.Controls.Add(this.BotaoFechar);
@@ -101,6 +104,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panelMenu.Controls.Add(this.BotaoRemover);
             this.panelMenu.Controls.Add(this.BotaoEstoque);
             this.panelMenu.Controls.Add(this.BotaoAdicionar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -108,6 +112,23 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(168, 491);
             this.panelMenu.TabIndex = 1;
+            // 
+            // BotaoRemover
+            // 
+            this.BotaoRemover.FlatAppearance.BorderSize = 0;
+            this.BotaoRemover.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BotaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoRemover.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoRemover.ForeColor = System.Drawing.Color.White;
+            this.BotaoRemover.Image = ((System.Drawing.Image)(resources.GetObject("BotaoRemover.Image")));
+            this.BotaoRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotaoRemover.Location = new System.Drawing.Point(0, 155);
+            this.BotaoRemover.Name = "BotaoRemover";
+            this.BotaoRemover.Size = new System.Drawing.Size(166, 71);
+            this.BotaoRemover.TabIndex = 1;
+            this.BotaoRemover.Text = "             REMOVER";
+            this.BotaoRemover.UseVisualStyleBackColor = false;
+            this.BotaoRemover.Click += new System.EventHandler(this.BotaoRemover_Click);
             // 
             // BotaoEstoque
             // 
@@ -152,6 +173,22 @@
             this.panelConteudo.TabIndex = 2;
             this.panelConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConteudo_Paint);
             // 
+            // BotaoMinimizar
+            // 
+            this.BotaoMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BotaoMinimizar.BackColor = System.Drawing.Color.White;
+            this.BotaoMinimizar.FlatAppearance.BorderSize = 0;
+            this.BotaoMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BotaoMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BotaoMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoMinimizar.Image")));
+            this.BotaoMinimizar.Location = new System.Drawing.Point(665, 3);
+            this.BotaoMinimizar.Name = "BotaoMinimizar";
+            this.BotaoMinimizar.Size = new System.Drawing.Size(40, 34);
+            this.BotaoMinimizar.TabIndex = 2;
+            this.BotaoMinimizar.UseVisualStyleBackColor = false;
+            this.BotaoMinimizar.Click += new System.EventHandler(this.BotaoMinimizar_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +218,7 @@
         private System.Windows.Forms.Button BotaoAdicionar;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel panelConteudo;
+        private System.Windows.Forms.Button BotaoRemover;
+        private System.Windows.Forms.Button BotaoMinimizar;
     }
 }

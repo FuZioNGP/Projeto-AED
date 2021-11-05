@@ -25,9 +25,19 @@ namespace ProjetoAED
 
         private void BotaoMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
-
+        private void BotaoMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         private void BotaoFechar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,6 +48,9 @@ namespace ProjetoAED
         }
 
         private void BotaoEstoque_Click(object sender, EventArgs e)
+        {
+        }
+        private void BotaoRemover_Click(object sender, EventArgs e)
         {
         }
         private void panelCabecalho_MouseMove(object sender, MouseEventArgs e)
@@ -51,7 +64,7 @@ namespace ProjetoAED
 
         private void panelConteudo_Paint(object sender, PaintEventArgs e)
         {
-
+            Console.WriteLine("teste");
         }
     }
 }
