@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+
 namespace ProjetoAED
 {
     public partial class FormMenu : Form
@@ -14,6 +15,7 @@ namespace ProjetoAED
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+
 
 
 
@@ -52,6 +54,11 @@ namespace ProjetoAED
         }
         private void BotaoRemover_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void BotaoPesquisar_Click(object sender, EventArgs e)
+        {
+
         }
         private void panelCabecalho_MouseMove(object sender, MouseEventArgs e)
         {
@@ -64,7 +71,7 @@ namespace ProjetoAED
 
         private void panelConteudo_Paint(object sender, PaintEventArgs e)
         {
-            Console.WriteLine("teste");
+            
         }
     }
 }

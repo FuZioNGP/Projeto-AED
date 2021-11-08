@@ -162,6 +162,38 @@
         6Aa5A0nNuen7yZKdcckev+TfCuIE4r7pD4oe+qQ3hC/VUtR4Qa5XHAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="BotaoPesquisar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
   <data name="BotaoRemover.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

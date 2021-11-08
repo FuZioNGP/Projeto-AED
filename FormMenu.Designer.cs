@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panelCabecalho = new System.Windows.Forms.Panel();
+            this.BotaoMinimizar = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.BotaoMaximizar = new System.Windows.Forms.Button();
             this.BotaoFechar = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@
             this.BotaoEstoque = new System.Windows.Forms.Button();
             this.BotaoAdicionar = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
-            this.BotaoMinimizar = new System.Windows.Forms.Button();
+            this.BotaoPesquisar = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,22 @@
             this.panelCabecalho.Size = new System.Drawing.Size(800, 40);
             this.panelCabecalho.TabIndex = 0;
             this.panelCabecalho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelCabecalho_MouseMove);
+            // 
+            // BotaoMinimizar
+            // 
+            this.BotaoMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BotaoMinimizar.BackColor = System.Drawing.Color.White;
+            this.BotaoMinimizar.FlatAppearance.BorderSize = 0;
+            this.BotaoMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BotaoMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BotaoMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoMinimizar.Image")));
+            this.BotaoMinimizar.Location = new System.Drawing.Point(665, 3);
+            this.BotaoMinimizar.Name = "BotaoMinimizar";
+            this.BotaoMinimizar.Size = new System.Drawing.Size(40, 34);
+            this.BotaoMinimizar.TabIndex = 2;
+            this.BotaoMinimizar.UseVisualStyleBackColor = false;
+            this.BotaoMinimizar.Click += new System.EventHandler(this.BotaoMinimizar_Click);
             // 
             // Title
             // 
@@ -104,6 +121,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panelMenu.Controls.Add(this.BotaoPesquisar);
             this.panelMenu.Controls.Add(this.BotaoRemover);
             this.panelMenu.Controls.Add(this.BotaoEstoque);
             this.panelMenu.Controls.Add(this.BotaoAdicionar);
@@ -122,11 +140,11 @@
             this.BotaoRemover.ForeColor = System.Drawing.Color.White;
             this.BotaoRemover.Image = ((System.Drawing.Image)(resources.GetObject("BotaoRemover.Image")));
             this.BotaoRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotaoRemover.Location = new System.Drawing.Point(0, 155);
+            this.BotaoRemover.Location = new System.Drawing.Point(0, 221);
             this.BotaoRemover.Name = "BotaoRemover";
             this.BotaoRemover.Size = new System.Drawing.Size(166, 71);
             this.BotaoRemover.TabIndex = 1;
-            this.BotaoRemover.Text = "             REMOVER";
+            this.BotaoRemover.Text = "         REMOVER";
             this.BotaoRemover.UseVisualStyleBackColor = false;
             this.BotaoRemover.Click += new System.EventHandler(this.BotaoRemover_Click);
             // 
@@ -156,7 +174,7 @@
             this.BotaoAdicionar.ForeColor = System.Drawing.Color.White;
             this.BotaoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoAdicionar.Image")));
             this.BotaoAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotaoAdicionar.Location = new System.Drawing.Point(0, 78);
+            this.BotaoAdicionar.Location = new System.Drawing.Point(0, 144);
             this.BotaoAdicionar.Name = "BotaoAdicionar";
             this.BotaoAdicionar.Size = new System.Drawing.Size(166, 71);
             this.BotaoAdicionar.TabIndex = 0;
@@ -173,21 +191,22 @@
             this.panelConteudo.TabIndex = 2;
             this.panelConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConteudo_Paint);
             // 
-            // BotaoMinimizar
+            // BotaoPesquisar
             // 
-            this.BotaoMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BotaoMinimizar.BackColor = System.Drawing.Color.White;
-            this.BotaoMinimizar.FlatAppearance.BorderSize = 0;
-            this.BotaoMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BotaoMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BotaoMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotaoMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoMinimizar.Image")));
-            this.BotaoMinimizar.Location = new System.Drawing.Point(665, 3);
-            this.BotaoMinimizar.Name = "BotaoMinimizar";
-            this.BotaoMinimizar.Size = new System.Drawing.Size(40, 34);
-            this.BotaoMinimizar.TabIndex = 2;
-            this.BotaoMinimizar.UseVisualStyleBackColor = false;
-            this.BotaoMinimizar.Click += new System.EventHandler(this.BotaoMinimizar_Click);
+            this.BotaoPesquisar.FlatAppearance.BorderSize = 0;
+            this.BotaoPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BotaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoPesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoPesquisar.ForeColor = System.Drawing.Color.White;
+            this.BotaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoPesquisar.Image")));
+            this.BotaoPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotaoPesquisar.Location = new System.Drawing.Point(0, 78);
+            this.BotaoPesquisar.Name = "BotaoPesquisar";
+            this.BotaoPesquisar.Size = new System.Drawing.Size(166, 71);
+            this.BotaoPesquisar.TabIndex = 2;
+            this.BotaoPesquisar.Text = "             PESQUISAR";
+            this.BotaoPesquisar.UseVisualStyleBackColor = false;
+            this.BotaoPesquisar.Click += new System.EventHandler(this.BotaoPesquisar_Click);
             // 
             // FormMenu
             // 
@@ -220,5 +239,6 @@
         private System.Windows.Forms.Panel panelConteudo;
         private System.Windows.Forms.Button BotaoRemover;
         private System.Windows.Forms.Button BotaoMinimizar;
+        private System.Windows.Forms.Button BotaoPesquisar;
     }
 }
