@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoAED
 {
-    public partial class Form4 : Form
+    public partial class pesquisar : Form
     {
-        public Form4()
+        public pesquisar()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

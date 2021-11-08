@@ -13,7 +13,7 @@ namespace SQL
         private static SQLiteConnection DbConnection()
         {
             string path = Directory.GetCurrentDirectory();
-            sqliteConnection = new SQLiteConnection($"Data Source={path}/DataBase/db.sqlite; Version=3;");
+            sqliteConnection = new SQLiteConnection($"Data Source={path}/db.sqlite; Version=3;");
             sqliteConnection.Open();
             return sqliteConnection;
         }
@@ -22,7 +22,7 @@ namespace SQL
             try
             {
                 string path = Directory.GetCurrentDirectory();
-                SQLiteConnection.CreateFile(path + "/DataBase/db.sqlite");
+                SQLiteConnection.CreateFile(path + "/db.sqlite");
             }
             catch
             {

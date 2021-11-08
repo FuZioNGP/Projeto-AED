@@ -70,20 +70,20 @@ namespace ProjetoAED
 
         private void BotaoAdicionar_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel<Form3>();
+            AbrirFormNoPanel<Adicionar>();
         }
 
         private void BotaoEstoque_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel<Form1>();
+            AbrirFormNoPanel<estoque>();
         }
         private void BotaoRemover_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel<Form4>();
+            AbrirFormNoPanel<remover>();
         }
         private void BotaoPesquisar_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel<Form2>();
+            AbrirFormNoPanel<pesquisar>();
         }
         private void panelCabecalho_MouseMove(object sender, MouseEventArgs e)
         {

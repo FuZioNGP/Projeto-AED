@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjetoAED
 {
-    public partial class Form3 : Form
+    public partial class estoque : Form
     {
-        public Form3()
+        public estoque()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

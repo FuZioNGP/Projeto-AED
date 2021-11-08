@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjetoAED
 {
-    public partial class Form2 : Form
+    public partial class Adicionar : Form
     {
-        public Form2()
+        public Adicionar()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

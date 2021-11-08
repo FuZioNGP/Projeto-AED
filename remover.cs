@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjetoAED
 {
-    public partial class Form1 : Form
+    public partial class remover : Form
     {
-        public Form1()
+        public remover()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void remover_Load(object sender, EventArgs e)
         {
 
         }
