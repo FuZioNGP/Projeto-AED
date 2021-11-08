@@ -10,13 +10,36 @@ namespace ProjetoAED
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
+        private int estado;
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
+        private void AbrirFormNoPanel<Forms>() where Forms : Form, new()
+        {
+            Form formulario;
+            formulario = panelConteudo.Controls.OfType<Forms>().FirstOrDefault();
 
+            if (formulario == null)
+            {
+                formulario = new Forms();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelConteudo.Controls.Add(formulario);
+                panelConteudo.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                if (formulario.WindowState == FormWindowState.Minimized)
+                    formulario.WindowState = FormWindowState.Normal;
+                formulario.BringToFront();
+            }
+        }
 
 
         public FormMenu()
@@ -47,18 +70,20 @@ namespace ProjetoAED
 
         private void BotaoAdicionar_Click(object sender, EventArgs e)
         {
+            AbrirFormNoPanel<Form3>();
         }
 
         private void BotaoEstoque_Click(object sender, EventArgs e)
         {
+            AbrirFormNoPanel<Form1>();
         }
         private void BotaoRemover_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormNoPanel<Form4>();
         }
         private void BotaoPesquisar_Click(object sender, EventArgs e)
         {
-
+            AbrirFormNoPanel<Form2>();
         }
         private void panelCabecalho_MouseMove(object sender, MouseEventArgs e)
         {
@@ -71,7 +96,12 @@ namespace ProjetoAED
 
         private void panelConteudo_Paint(object sender, PaintEventArgs e)
         {
-            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

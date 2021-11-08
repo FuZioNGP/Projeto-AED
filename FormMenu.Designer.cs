@@ -35,11 +35,11 @@
             this.BotaoMaximizar = new System.Windows.Forms.Button();
             this.BotaoFechar = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BotaoPesquisar = new System.Windows.Forms.Button();
             this.BotaoRemover = new System.Windows.Forms.Button();
             this.BotaoEstoque = new System.Windows.Forms.Button();
             this.BotaoAdicionar = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
-            this.BotaoPesquisar = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +131,23 @@
             this.panelMenu.Size = new System.Drawing.Size(168, 491);
             this.panelMenu.TabIndex = 1;
             // 
+            // BotaoPesquisar
+            // 
+            this.BotaoPesquisar.FlatAppearance.BorderSize = 0;
+            this.BotaoPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BotaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoPesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoPesquisar.ForeColor = System.Drawing.Color.White;
+            this.BotaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoPesquisar.Image")));
+            this.BotaoPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotaoPesquisar.Location = new System.Drawing.Point(0, 78);
+            this.BotaoPesquisar.Name = "BotaoPesquisar";
+            this.BotaoPesquisar.Size = new System.Drawing.Size(166, 71);
+            this.BotaoPesquisar.TabIndex = 2;
+            this.BotaoPesquisar.Text = "             PESQUISAR";
+            this.BotaoPesquisar.UseVisualStyleBackColor = false;
+            this.BotaoPesquisar.Click += new System.EventHandler(this.BotaoPesquisar_Click);
+            // 
             // BotaoRemover
             // 
             this.BotaoRemover.FlatAppearance.BorderSize = 0;
@@ -190,23 +207,6 @@
             this.panelConteudo.Size = new System.Drawing.Size(632, 491);
             this.panelConteudo.TabIndex = 2;
             this.panelConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConteudo_Paint);
-            // 
-            // BotaoPesquisar
-            // 
-            this.BotaoPesquisar.FlatAppearance.BorderSize = 0;
-            this.BotaoPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BotaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotaoPesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoPesquisar.ForeColor = System.Drawing.Color.White;
-            this.BotaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoPesquisar.Image")));
-            this.BotaoPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotaoPesquisar.Location = new System.Drawing.Point(0, 78);
-            this.BotaoPesquisar.Name = "BotaoPesquisar";
-            this.BotaoPesquisar.Size = new System.Drawing.Size(166, 71);
-            this.BotaoPesquisar.TabIndex = 2;
-            this.BotaoPesquisar.Text = "             PESQUISAR";
-            this.BotaoPesquisar.UseVisualStyleBackColor = false;
-            this.BotaoPesquisar.Click += new System.EventHandler(this.BotaoPesquisar_Click);
             // 
             // FormMenu
             // 
