@@ -40,6 +40,7 @@
             this.BotaoEstoque = new System.Windows.Forms.Button();
             this.BotaoAdicionar = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
+            this.BotaoCadastrar = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +122,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panelMenu.Controls.Add(this.BotaoCadastrar);
             this.panelMenu.Controls.Add(this.BotaoPesquisar);
             this.panelMenu.Controls.Add(this.BotaoRemover);
             this.panelMenu.Controls.Add(this.BotaoEstoque);
@@ -208,6 +210,23 @@
             this.panelConteudo.TabIndex = 2;
             this.panelConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConteudo_Paint);
             // 
+            // BotaoCadastrar
+            // 
+            this.BotaoCadastrar.FlatAppearance.BorderSize = 0;
+            this.BotaoCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BotaoCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoCadastrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoCadastrar.ForeColor = System.Drawing.Color.White;
+            this.BotaoCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("BotaoCadastrar.Image")));
+            this.BotaoCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotaoCadastrar.Location = new System.Drawing.Point(0, 298);
+            this.BotaoCadastrar.Name = "BotaoCadastrar";
+            this.BotaoCadastrar.Size = new System.Drawing.Size(166, 71);
+            this.BotaoCadastrar.TabIndex = 3;
+            this.BotaoCadastrar.Text = "             CADASTRAR";
+            this.BotaoCadastrar.UseVisualStyleBackColor = false;
+            this.BotaoCadastrar.Click += new System.EventHandler(this.BotaoCadastrar_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,5 +259,6 @@
         private System.Windows.Forms.Button BotaoRemover;
         private System.Windows.Forms.Button BotaoMinimizar;
         private System.Windows.Forms.Button BotaoPesquisar;
+        private System.Windows.Forms.Button BotaoCadastrar;
     }
 }

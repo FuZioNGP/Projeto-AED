@@ -10,7 +10,6 @@ namespace ProjetoAED
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-        private int estado;
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -68,9 +67,9 @@ namespace ProjetoAED
             this.Close();
         }
 
-        private void BotaoAdicionar_Click(object sender, EventArgs e)
+        private void BotaoCadastrar_Click(object sender, EventArgs e)
         {
-            AbrirFormNoPanel<Adicionar>();
+            AbrirFormNoPanel<Cadastrar>();
         }
 
         private void BotaoEstoque_Click(object sender, EventArgs e)
@@ -84,6 +83,10 @@ namespace ProjetoAED
         private void BotaoPesquisar_Click(object sender, EventArgs e)
         {
             AbrirFormNoPanel<pesquisar>();
+        }
+        private void BotaoAdicionar_Click(object sender, EventArgs e)
+        {
+            AbrirFormNoPanel<adicionar>();
         }
         private void panelCabecalho_MouseMove(object sender, MouseEventArgs e)
         {
