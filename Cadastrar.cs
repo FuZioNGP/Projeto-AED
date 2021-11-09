@@ -26,5 +26,10 @@ namespace ProjetoAED
         {
 
         }
+
+        private void Cadastrar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

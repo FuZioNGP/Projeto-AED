@@ -45,7 +45,7 @@ namespace SQL
             }
         }
 
-        public static DataTable GetClientes()
+        public DataTable GetClientes()
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -53,7 +53,7 @@ namespace SQL
             {
                 using (var cmd = DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Clientes";
+                    cmd.CommandText = "SELECT * FROM Estoque";
                     da = new SQLiteDataAdapter(cmd.CommandText, DbConnection());
                     da.Fill(dt);
                     return dt;
@@ -64,7 +64,7 @@ namespace SQL
                 throw ex;
             }
         }
-        public static DataTable GetCliente(int id)
+        public DataTable GetCliente(int id)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -72,7 +72,7 @@ namespace SQL
             {
                 using (var cmd = DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Clientes Where Id=" + id;
+                    cmd.CommandText = "SELECT * FROM Estoque Where Id=" + id;
                     da = new SQLiteDataAdapter(cmd.CommandText, DbConnection());
                     da.Fill(dt);
                     return dt;
