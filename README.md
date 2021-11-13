@@ -6,3 +6,6 @@ O projeto esta sendo feito pelo windows forms, 3 classes foram definidas. A clas
 O aplicativo no forms ja está pronto, e a conexão db também (foi optado pelo sql lite por ser mais simples, e também mais compativel não existe a necessidade de instalar um banco de dados, pois o banco de dados fica salvo em um arquivo que é criado assim que inicia o programa). 
 
 Faltando apenas a class produto, para que seja finalizado o projeto.
+
+
+Professor infelizmente nao poderei enviar o video hoje. Expliquei tudo pelo email. Assim que tiver refeito a parte final do projeto atualizo o Readme.MD com o link.
