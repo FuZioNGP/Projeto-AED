@@ -18,6 +18,7 @@
             return NomeProd;
         }
 
+
         public int GetQuantProd()
         {
             return QuantProd;
