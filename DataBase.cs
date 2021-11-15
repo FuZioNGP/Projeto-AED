@@ -64,7 +64,7 @@ namespace SQL
                 throw ex;
             }
         }
-        public DataTable GetCliente(int id)
+        public DataTable GetCliente(string name)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -72,7 +72,7 @@ namespace SQL
             {
                 using (var cmd = DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Estoque Where Id=" + id;
+                    cmd.CommandText = "SELECT * FROM Estoque Where produto=" + name;
                     da = new SQLiteDataAdapter(cmd.CommandText, DbConnection());
                     da.Fill(dt);
                     return dt;
