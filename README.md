@@ -9,3 +9,5 @@ Faltando apenas a class produto, para que seja finalizado o projeto.
 
 
 Professor infelizmente nao poderei enviar o video hoje. Expliquei tudo pelo email. Assim que tiver refeito a parte final do projeto atualizo o Readme.MD com o link.
+
+Link do video: https://youtu.be/zu9FDNs47Us
